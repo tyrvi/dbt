@@ -1,0 +1,31 @@
+person_id,first_name,last_name,date_of_birth,gender,address,city,state,zip,country,country_of_origin,ethnicity,employment
+1,Brian,Rodgers,1976-03-05,M,58 South Longbranch Ave.,Coachella,CA,92236,US,DK,White,1
+2,Anthony,Rivas,1982-11-29,M,9224 North James St.,Woonsocket,RI,02895,US,US,White,0
+3,Daniel,Jensen,1984-08-15,M,7B Summer Court,Langhorne,PA,19047,US,US,White,0
+4,Anna,Salazar,1987-12-11,F,36 E. Heather Street,Grand Island,NE,68801,US,US,White,0
+5,Bryan,Martinez,1976-06-15,F,78 Bay St.,Natchez,MS,39120,US,US,White,0
+6,Cody,Clark,1993-03-13,F,453 Redwood Street,Victoria,TX,77904,US,CN,Asian,0
+7,Bailey,Gonzalez,1989-09-24,M,127 Bank Lane,Mahopac,NY,10541,US,US,Black or African A.,1
+8,Whitney,Ferguson,1989-01-18,M,48 Holly Avenue,Marcus Hook,PA,19061,US,UK,White,0
+9,Joshua,Underwood,1995-10-17,F,73 Rosewood Drive,Ashland,OH,44805,US,DK,White,1
+10,Kelly,Fitzgerald,1996-01-11,F,861 South Cottage St.,Sanford,NC,27330,US,US,White,0
+11,Nicholas,Santiago,1982-03-13,M,38 Lafayette Drive,Marlton,NJ,08053,US,US,White,0
+12,Xavier,Waller,1995-07-15,F,61 West Garfield St.,Clementon,NJ,08021,US,CN,Asian,1
+13,Katrina,Cooper,1969-02-06,M,7762 Beach Drive,Lawndale,CA,90260,US,AD,Black or African A.,0
+14,Travis,Young,1975-03-27,M,80 Warren Drive,Deerfield Beach,FL,33442,US,US,Black or African A.,1
+15,Andrea,Holland,1994-09-20,M,98 6th Court,Hendersonville,NC,28792,US,MX,Hispanic,0
+16,Kristen,Guerrero,1982-02-24,M,211 Del Monte Dr.,Greensburg,PA,15601,US,US,White,0
+17,Heather,Miranda,1997-12-03,F,284 Glenwood Drive,Maumee,OH,43537,US,DK,White,0
+18,Zoe,Lamb,1995-07-13,F,8085 Fairway St.,Dacula,GA,30019,US,US,White,1
+19,Nicole,Carlson,1978-01-23,M,50 Bow Ridge Court,West Hempstead,NY,11552,US,US,White,1
+20,Lisa,Norman,1976-12-22,M,9360 Rosewood St.,Yuma,AZ,85365,US,CN,Asian,0
+21,John,Miller,1974-10-16,F,8208 NW. Fawn Street,Westminster,MD,21157,US,DK,White,0
+22,Michael,Perry,1978-05-06,M,799 Myrtle St.,Evanston,IL,60201,US,CN,Asian,1
+23,Margaret,Anthony,1997-07-16,F,636 Marsh Street,Roanoke Rapids,NC,27870,US,AD,Black or African A.,0
+24,Paige,Smith,1992-11-09,F,8123 Addison Court,Mcminnville,TN,37110,US,PA,Hispanic,1
+25,Amy,Morales,1994-10-08,M,7528 N. Magnolia Rd.,Simpsonville,SC,29680,US,MX,Hispanic,1
+26,Wesley,Boyd,1997-02-14,F,236 South Westport St.,Bayonne,NJ,7002,US,US,White,1
+27,Jillian,Smith,1985-11-01,M,8445 South Cedar Swamp St.,Hicksville,NY,11801,US,UK,White,1
+28,Courtney,Taylor,1992-06-12,F,744 Honey Creek Ave.,Georgetown,SC,29440,US,US,White,1
+29,Sarah,Downs,1986-12-07,M,22 James Lane,Westminster,MD,21157,US,UK,Black or African A.,1
+30,Stephanie,Nguyen,1981-01-02,F,857 S. Mountainview Road,Lapeer,MI,48446,US,US,Asian,0
