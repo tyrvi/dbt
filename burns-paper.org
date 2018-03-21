@@ -1,0 +1,261 @@
+~* Tasks
+** DONE Choose 3 topics
+   CLOSED: [2018-03-21 Wed 16:25]
+
+
+** Potential Topics
+
+1. Chapter 9 - Building the agile database
+   + Look at virtualizing the database and techniques for doing so
+
+2. chapter 5 - The logical/physical divide
+   + Talk about the logical/physical divide and what that entails.
+
+3. chapter 4 - Data management roles
+   + Talk about the different roles and their responsibilies
+
+
+** Chapter 4 - data management roles
+
+*** the art of data management
++ data mangement: dedicated to the creation management and use of data as an
+  enterprise asset
+  + the art of turning data into business value
++ John Dart --> the goals of data management is to get:
+  + the right data
+  + to the right person
+  + at the right time
+  + in the right form
+  + at a cost that yields value
+
+*** Roles
++ following roles are not always defined this way everywhere
++ not all organizations have a separate data group to oversee data management
+
+**** Data manager role
++ oversee the people, processes and resources involed in carrying out the 
+  mission of data management
++ interact with managers of other groups and upper-level management
++ must function as a resource manager for the data group
+  + manager must prioritize request and allocate resources in the most effective
+    way possible
+
+**** Data analyst role
++ perform the work of helping to determine and document the data requirements
+  of the business
++ meet with business users, managers, project managers and application 
+  architects
++ assume a lead role in data quality (DQ), master data management (MDM)
+  and business intelligence (BI)
++ data modeling:
+  + starts with high-level context diagram called /conceptual data model/
+  + goes to lover level of detail of /logical data model/
+    + /logical data model/ documetns the business data requirements, definitions
+      and rules
++ can be divided between /database architects/ and /data modelers/
+
+**** Database developer role
++ perform the work of designing and building databases
++ 2 aspects
+  + creation of pysical schema
+  + creation of one or more data layers to support specific applications
++ participate in the development of database code
+  + queries, database triggers, functions, views and stored procedures
+
+**** Database administrator role
++ responsible for building and maintaining database servers
++ ensure performance, security, and recoverability of db servers
++ apply changes to db and db servers in Certification/QA and production
+  environments
++ perform audits of database and server access, respond to production problems
+
+**** Data steward role
++ business managers who are responsible for defining the data requirements and 
+  data rules for a business area
++ work with data analysts and architects, application architects and project
+  managers
+
+** Chapter 5 - The logical/physical divide
+*** The object-relational impedance mismatch
++ applications and databases often see and work with data in different ways
++ applications see data as properties of object classes; relational databases 
+  see data as attributes of entities
++ *logical data model* describes and documents the data requirements of a 
+  particular subject area of the business
+  + no prescription/assumption as to how the data requirements will be 
+    implemented or how the data will be used by a particular application
+  + should be /one/ and only one logical data model
+  + *business centered*
++ *physical data model* is defined by its implementation in a particualr
+  technology and by its relationship to specific applications
+  + one logical schema can support multiple physical schemas
+  + *application centered*
++ *object relational impedance mismatch:* applications objects need to work with
+  a /physical/ view of data that maps directly to the physical properties of 
+  those objects
++ normalized base schema should be changed only when a business requirement
+  forces a change in the logical data model
+
+*** Virtual data layer
+
++ *virtual data layer* consists of a set of database objects which serve to mask 
+  the complexity of the underlying database schema from applications 
+
+**** advantages:
++ eliminates relational impedance mismatch by creating virtual data objects that
+  map to application object classes
++ reduces coupling between the applicatino and the database schema
++ simplifies application code
++ increases performance
++ increases scalability and reliability of the application
++ reduces network traffic and bandwidth
+ 
+
+** Chapter 9 - building the agile database
++ reduce or eliminate the "object-relational impedance mismatch" in a way that 
+  safeguards the security and integrity of data
+
+*** Abstraction and encapsulation
++ Abstraction - identifying the critical functionality that needs to be made
+  available to the user (the "what")
++ Encapsulation - packaging functionality in a way that hides the manner of
+  implementation (the "how") from the user
++ present easy-to-use interface that enables "what" and hides "how"
+  + don't need to know about electricity to use light switch
+    + come up with additional analogies? 
++ developers frustrated by databases often requiring in depth knowledge of 
+  storage and  structure of the data to access it
+  + SOLUTION: create layers of abstraction to hide physical implementation
+    + makes db applications easier to write and enables structur, implementation
+      and location of data to be changed without breaking applications
+
+*** Cohesion and coupling
++ Coupling - keep applications and dbs loosely coupled
++ Cohesion - all data needed to support properties of an application object
+  should be available in one place
++ reconcile data virtually
+
+*** Virtualizing the database
+**** Techniques
+  + Views
+  + stored procedures
+  + triggers
+  + functions
+  + work tables and materialized views
+  + application data objects
+  + complex data types
+
+*** Views
++ most important
++ easily modified and can be developed incrementally
+
+**** benefits:
+  + support multiple application-specific views of data
+  + enable decoupling of application code from schema
+  + can be given application-specifc data names, lengths
+    and data types
+  + can be used to enforce data security
+  + can join data from multiple tables hiding complexity
+    and improve performance
+  + data encryption support improved
+  + used for on-the-fly conversion, cleansing and reformatting of data
+  + used to join relational and XML data or give hierarchical view of 
+    relational data
+  + can be made updatable
+
+**** use views when...
++ you want to define a view of the data that maps more directly to an 
+  application object
++ you want mask or predefine table joins to simplify/improve coding/performance
++ want to reuse particular view of data to support multiple customers
++ limit users view of data, impose security or support encryption
++ want to decouple application view of data from base schema
+
+**** advice on views
++ keep views small and focused
+  + better to have large number of views than small number of generalized views
+  + talk about senior seminar project views in db in case data needs to be 
+    accessed by other applications in the future
++ views should directly reference base tables not views since it will affect
+  performance
++ views require little or no maintenance
++ identify views early (during design) and create them before database coding
+  starts
++ make sure appropriate indexes exist for the underlying tables and joins
++ if SELECTs from a view will return a large number of rows use a wrapper procedure
++ never use SELECT * in views, keeps the view from breaking if schema changes
++ avoid using table hints in views
++ use SELECT WITH NOLOCK since it permits "dirty reads"
+  + you can see records that someone else is in the process of changing
+  + will improve performance
++ document views explaining purpose and type of data returned
++ use standard version control when changing view code
+
+**** standards for views
++ views should have descriptive names and describe the data type in the view
++ identify foreign views
++ SELECT permission on views can be granted to one or more database roles that 
+  have authority to view that data which are associated with security groups
+  + don't define define database permissions at the user account level
+
+*** Stored procedures
++ can return data to a calling application either as individual values or as
+  collection of rows or rowsets
+  + similar to views except they can be parameterized and perform complex logic
+  + usefule as wrappers to views
+
+**** Advantages
++ amount of data and SQL sent across network is minimized
++ code is precompiled and pre-optimized
++ processing of data done using the resources of server not application or client
++ code is easier to test, debug and tune than embedded SQL
++ execute permissions on stored procedures
++ transaction management can be used to encapsulate a particular "unit of work"
+  for the db
+
+**** Use stored procedures when...
++ encapsulating compolex data-oriented logic the should be executed on db server
++ doing db updtes
++ restricting amount of data return in query or view
++ performing complex SELECT involving joins of multiple tables
+
+**** Advice on stored procedures
++ treat them like any other code i.e. testable, debuggable, etc.
++ use standard version-control
++ test input parameters at beginning of procedure
++ should always send a return value
++ document the stored procedure
++ do code walk-throughs
++ do performance testing and tuning prior to implementation
++ pay attention to issues that cause the stored procedure to be recompiled each
+  time they are executed
++ avoid optional parameters
++ extract complex joins into views then reference procdures in views
++ beware of dynamic SQL
++ encapsulate the smallest possible unit of work in a given procedure
+
+**** standard for stored procedures
++ should have descriptive names
++ EXECUTE permissions on stored procedures can be granted to one or more db
+  roles
+
+*** Triggers
+
+*** Functions
+
+*** Work tables and materialized views
+
+*** Application data objects
+
+*** Complex data types
+**** Categories
++ modified scalar: used to define scalar objects constrained by rules that hold
+  a particular type of data
+  + e.g. telephone numbers
++ table-valued: user-defined datatypes which are useful for passing multiple 
+  rows of data to stored procedures and functions
+  + pointer of read-only copy in memory can be passed to stored procedure or 
+    user defined function
++ structure: complex datatypes consisting of multiple scalar types
+  + subtypes of previously defined objects
+  + tables as multi-valued instances of these types
