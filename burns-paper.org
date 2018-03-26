@@ -1,4 +1,4 @@
-~* Tasks
+* Tasks
 ** DONE Choose 3 topics
    CLOSED: [2018-03-21 Wed 16:25]
 
@@ -77,6 +77,12 @@
 
 ** Chapter 5 - The logical/physical divide
 *** The object-relational impedance mismatch
+**** *discuss current project and object-relational impedance mismatch there*
++ needing REST API to present data in particular way for the front-end website
++ REST API is the direct user of the database
++ future additions to project could add views to the database that are accessed
+  by the different APIs as needed
+
 + applications and databases often see and work with data in different ways
 + applications see data as properties of object classes; relational databases 
   see data as attributes of entities
@@ -112,6 +118,11 @@
  
 
 ** Chapter 9 - building the agile database
+**** *discuss current project database and virtualization we have done there*
++ have not implemented any views
++ REST API as virtualization
+
+
 + reduce or eliminate the "object-relational impedance mismatch" in a way that 
   safeguards the security and integrity of data
 

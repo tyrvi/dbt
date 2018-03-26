@@ -1,0 +1,21 @@
+** Potential topics
+
+1. 17.3 (pg. 617) Dynamic multilevel indexes using B-trees and B+-trees
+  + talk about dynamic multilevel indexes
+  + talk about B-trees, B+-trees and searching B-trees
+
+2. 19.1 (pg. 692) Query trees and Heuristics for query optimization
+  + what are query trees?
+  + what are query graphs?
+  + heuristics for query optimization?
+
+3. 20.1 (pg. 746) Introduction to transaction processing
+  + explanation of transaction processing
+  + why concurrency control is needed
+  + why we need /transactions/
+
+** 17.3 Dynamic Multilevel Indexes
+
+** 19.1 Query Trees and Heuristics
+
+** 20.1 Introduction to Transaction Processing
