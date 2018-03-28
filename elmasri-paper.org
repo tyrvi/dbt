@@ -9,13 +9,54 @@
   + what are query graphs?
   + heuristics for query optimization?
 
-3. 20.1 (pg. 746) Introduction to transaction processing
+3. 20.1 (pg. 746) & 21.1 (pg. 782) Introduction to transaction processing
   + explanation of transaction processing
   + why concurrency control is needed
   + why we need /transactions/
 
-** 17.3 Dynamic Multilevel Indexes
+** 17.3 Dynamic Multilevel Indexes (B-trees)
+   + Trees
+     + definition
+   + Search trees
+     + definition
+   + Search trees of order p
+     + definition
+     + /constraints/
+     + example
+   + B-trees
+     + definition
+     + what are they used for
+     + /constraints/
+     + /search/
+     + example
+   + B+ trees
+     + definition
+     + how it differs from B-trees
+     + what are they used for
+     + /constraints/
+     + /search/
+     + /insertion/
+     + /deletion/
 
 ** 19.1 Query Trees and Heuristics
-
-** 20.1 Introduction to Transaction Processing
+   + Query Trees
+     + What is a query tree
+     + notation
+     + example
+   + Heuristics optimization
+     + what is the heuristic
+     + cover a few rules
+     + example
+ 
+** 20.1 Transaction processing & 21.1 two-phase locking techniques (concurrency)
+   + what is a transaction?
+     + what are the parts of a transaction
+       + read and write (pg. 748)
+   + single-user vs. multiuser system
+   + Why concurrency control is needed (pg. 749)
+     + example
+   + Two-phase locking
+     + types of locks and system lock tables
+       + binary locks
+       + shared/exclusive (read/write) locks
+       + examples
